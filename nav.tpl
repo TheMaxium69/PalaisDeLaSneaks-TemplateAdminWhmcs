@@ -13,9 +13,23 @@
 <div class="navbar-collapse">
     <ul>
         <li class="">
+            <a id="Menu-Clients" href="../admin/" onclick="">
+                Accueil
+            </a>
+        </li>
+        <li class="">
+            <a id="Menu-Clients" href="../../" onclick="">
+                Site Internet
+            </a>
+        </li>
+        <li class="">
+            <a id="Menu-Clients" href="orders.php" onclick="">
+                Mes Ventes
+            </a>
+        </li>
+        <li class="">
             <a id="Menu-Clients" href="configproducts.php" onclick="">
-                <i class="fas fa-user"></i>
-                Créer une chaussure
+                Gerez
             </a>
         </li>
     </ul>
@@ -29,9 +43,6 @@
             </a>
             <ul class="slim drop-left">
                 <li><a href="myaccount.php">{$_ADMINLANG.global.myaccount}</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#modalMyNotes">{$_ADMINLANG.global.mynotes}</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="../">{$_ADMINLANG.global.clientarea}</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a id="Menu-Account-Logout" href="logout.php">{$_ADMINLANG.global.logout}</a></li>
             </ul>

@@ -69,8 +69,8 @@
             }
 
             .btn-primary:focus{
-                background-color: #a70a1a;
-                border-color: #a70a1a;
+                background-color: #a70a1a!important;
+                border-color: #a70a1a!important;;
             }
 
             table.form td.fieldarea {
@@ -87,20 +87,35 @@
                 background-color: #bb2d3b;
             }
 
+            #dismissPromos{
+                display: none;
+            }
+
+            .product-mc-promos{
+                display: none;
+            }
+
         </style>
 
 {* GESTION PAGE *}
 
         <script>
             //  document.getElementById("tabLink1").textContent = "Nouveau texte";
-            var contentArea = document.querySelector(".contentarea p");
-            if (contentArea){
-                contentArea.textContent = "Gestion des Chaussures";
+            var pContentArea = document.querySelector(".contentarea p");
+            if (pContentArea){
+                pContentArea.textContent = "Gestion des Chaussures";
             }
+
+            var CreateGrouplink = document.querySelector("#Create-Group-link");
+            CreateGrouplink.innerHTML = '<i class="fas fa-plus"></i> Créer une marque'
+            var CreateProductlink = document.querySelector("#Create-Product-link");
+            CreateProductlink.innerHTML = '<i class="fas fa-plus-circle"></i> Créer une chaussure'
+            var DuplicateProductlink = document.querySelector("#Duplicate-Product-link");
+            DuplicateProductlink.innerHTML = '<i class="fas fa-plus-square"></i> Dupliqué une chaussure'
 
         </script>
 
-{* CREATE GROUP *}
+{* CREATE/EDITE GROUP *}
 
         <script>
 
@@ -109,7 +124,7 @@
                 console.log("page GroupCreate");
 
                 var titleGroupCreate = document.querySelector("h2:first-of-type");
-                titleGroupCreate.textContent = "Créer une marque";
+                titleGroupCreate.textContent = "Créer/Editer une marque";
 
                 var nameFormTd = document.querySelector(".contentarea #frmAddProductGroup tr:first-child");
                 nameFormTd.querySelector("td:first-child").textContent = "Nom de la marque";
@@ -120,6 +135,10 @@
 
         <style>
 
+            #frmAddProductGroup{
+                background-color: white;
+            }
+
             .contentarea #frmAddProductGroup tr:not(:first-child){
                 display: none;
             }
@@ -129,13 +148,29 @@
             }
         </style>
 
-{* EDITE GROUP *}
+{* CREATE-FIRST PRODUCT *}
+
+        <script>
+
+            var inputTypeProduct = document.querySelector('#frmAddProduct .form-group:first-child input');
+            inputTypeProduct.value = "other";
 
 
-{* CREATE PRODUCT *}
+
+        </script>
+
+        <style>
+
+            /*#frmAddProduct div.form-group:nth-child(2){*/
+
+            /*    background-color: red;*/
+
+            /*}*/
+
+        </style>
 
 
-{* EDIT PRODUCT *}
+{* EDIT/CREATE-SECOND PRODUCT *}
 
         <script>
 
