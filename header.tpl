@@ -45,18 +45,15 @@
         {include file="$template/nav.tpl"}
     </div>
 
-    <div class="sidebar{if $minsidebar} minimized{/if}" id="sidebar">
-        <a href="#" class="sidebar-collapse-expand" id="sidebarCollapseExpand">
-            <i class="fa fa-chevron-down"></i>
-        </a>
-        <div class="sidebar-collapse">
-            {include file="$template/sidebar.tpl"}
-        </div>
-    </div>
-    <a href="#" class="sidebar-opener{if $minsidebar} minimized{/if}" id="sidebarOpener">
-        {$_ADMINLANG.openSidebar}
-    </a>
+    <style>
+
+        .contentarea{
+            margin: 0!important;
+        }
+    </style>
 
     <div class="contentarea{if $minsidebar} sidebar-minimized{/if}" id="contentarea">
         <div style="float:left;width:100%;">
             <h1{if $pagetitle == $_ADMINLANG.global.hometitle} class="pull-left"{/if}>{$pagetitle}</h1>
+
+

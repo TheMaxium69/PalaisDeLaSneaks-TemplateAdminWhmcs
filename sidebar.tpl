@@ -447,6 +447,7 @@
 {elseif $sidebar eq "config"}
 
 <div class="sidebar-header">
+    <h1>NIKE TA MERE</h1>
     <i class="fas fa-wrench"></i>
     {$_ADMINLANG.setup.config}
 </div>

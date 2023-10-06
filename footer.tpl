@@ -19,6 +19,32 @@
         </div>
     </div>
 
+
+        <script>
+          //  document.getElementById("tabLink1").textContent = "Nouveau texte";
+
+
+
+          var contentArea = document.querySelector(".contentarea p");
+
+
+          contentArea.textContent = "Gestion des Chaussures";
+
+
+        </script>
+
+
+        <style>
+
+            .contentarea  #frmProductEdit ul.nav li a#tabLink7{
+                display: none!important;
+
+
+            }
+
+        </style>
+
+
     {include file="$template/intellisearch-results.tpl"}
     {include file="$template/includes.tpl"}
     {$footeroutput}
