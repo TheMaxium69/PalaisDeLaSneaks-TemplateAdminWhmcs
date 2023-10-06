@@ -80,6 +80,15 @@
                 visibility: visible!important;
             }
 
+            #tab4 table tr:nth-child(4),
+            #tab4 table tr:nth-child(5){
+                display: none;
+            }
+
+            #tab4 table tr:nth-child(6) td.fieldarea label{
+                display: none;
+            }
+
 
 
         </style>
