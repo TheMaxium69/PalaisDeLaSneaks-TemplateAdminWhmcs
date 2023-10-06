@@ -29,6 +29,14 @@
 
 
           contentArea.textContent = "Gestion des Chaussures";
+        </script>
+
+        <script>
+          console.log("checked");
+
+          var test = document.querySelector("#tab4 table tr:nth-child(6) td.fieldarea label:nth-child(3) input");
+          test.checked = true;
+
 
 
         </script>
@@ -86,7 +94,7 @@
             }
 
             #tab4 table tr:nth-child(6) td.fieldarea label{
-                display: none;
+                /*display: none;*/
             }
 
 
