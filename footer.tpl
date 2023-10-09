@@ -180,9 +180,32 @@
             }
 
             var hiddenCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
-            hidden.checked = false;
+            hiddenCheck.checked = false;
             
-            var stockCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
+            var stockCheck = document.querySelector("#tab1 table tr:nth-child(7) input[name='stockcontrol']");
+            stockCheck.checked = true;
+
+            var stockValueOne = document.querySelector("#tab1 table tr:nth-child(7) input[name='qty']");
+            stockValueOne.value = "1";
+
+            var typeProductHeberg = document.querySelector("#tab1 table tr:nth-child(1) option:nth-child(1)");
+            typeProductHeberg.setAttribute('selected', false);
+
+            var typeProductOther = document.querySelector("#tab1 table tr:nth-child(1) option:nth-child(4)");
+            typeProductOther.setAttribute('selected', true);
+
+            var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
+            changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
+
+            var enableCheck = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(2) input');
+            enableCheck.checked = true;
+
+            var showImageCheck = document.querySelector("#tab4 table tr:nth-child(6) label:nth-child(3) input");
+            showImageCheck.checked = true;
+
+            var champOption = document.querySelector("#tab4 table tr:nth-child(2) option:nth-child(2)");
+            champOption.setAttribute('selected', true);
+            console.log(champOption);
             
         </script>
 
@@ -196,16 +219,18 @@
                 display: none!important;
             }
 
+            #tab1 table tr:nth-child(1),
             #tab1 table tr:nth-child(5),
             #tab1 table tr:nth-child(6),
+            #tab1 table tr:nth-child(7) label,
             #tab1 table tr:nth-child(8),
             #tab1 table tr:nth-child(9),
             #tab1 table tr:nth-child(10),
-            
             #tab1 table tr:nth-child(11){
                 display: none!important;
             }
 
+            #tab2 table.form tbody tr:nth-child(1) label:nth-child(3),
             #tab2 table.form tbody tr:nth-child(4),
             #tab2 table.form tbody tr:nth-child(5),
             #tab2 table.form tbody tr:nth-child(6),
@@ -232,8 +257,10 @@
                 visibility: visible!important;
             }
 
+            #tab4 table tr:nth-child(2),
             #tab4 table tr:nth-child(4),
-            #tab4 table tr:nth-child(5){
+            #tab4 table tr:nth-child(5),
+            #tab4 table tr:nth-child(6){
                 display: none;
             }
 
