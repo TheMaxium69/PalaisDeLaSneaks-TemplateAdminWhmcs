@@ -252,6 +252,32 @@
             }
 
         </style>
+{* FOOTER *}
+
+        <script>
+
+
+            var footer = document.querySelector(".footerbar");
+            var footerCop = footer.querySelector(".copyright");
+            var footerLink = footer.querySelector(".links");
+
+            footerCop.innerHTML = " Copyright © " + '<a href="https://tyrolium.fr/" target="_blank">Tyrolium</a> 2023.' + " All Rights Reserved.";
+            footerLink.innerHTML = '<a href="https://tyrolium.fr" target="_blank">Web Site</a>  | <a href="../../about.php" target="_blank">Conditions & Terms</a>'
+
+
+        </script>
+
+
+        <style>
+
+            .footerbar{
+                background-color: #bb2d3b;
+            }
+
+
+        </style>
+
+
 {* END *}
 
     {include file="$template/intellisearch-results.tpl"}
