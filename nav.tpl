@@ -1,5 +1,5 @@
 <a href="index.php" class="logo" title="{$_ADMINLANG.home.title}">
-    <img src="../../assets/logo.png" style="max-width: 35px!important;">
+    <img src="../../assets/logoDetoure.png" style="max-width: 35px!important;">
 </a>
 
 <ul class="left-nav">
