@@ -179,16 +179,9 @@
                 asChecked.checked = true;
             }
 
-            var productShared = document.querySelector("#productTypeShared");
-            var productOther = document.querySelector("#productTypeOther");
-            productShared.classList.remove("active");
-            productOther.classList.add("active");
-
-            var switchButton = document.querySelector(".bootstrap-switch-on");
-            switchButton.classList.remove("bootstrap-switch-on");
-            switchButton.classList.add("bootstrap-switch-off");
-
-            console.log(switchButton);
+            var hiddenCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
+            hidden.checked = false;
+            
 
         </script>
 
@@ -247,7 +240,9 @@
             }
 
             #frmAddProduct .form-group:nth-child(3),
-            #frmAddProduct .form-group:nth-child(6){
+            #frmAddProduct .form-group:nth-child(6),
+            #frmAddProduct .form-group:nth-child(7),
+            #frmAddProduct .alert-grey{
                 display: none;
             }
 
