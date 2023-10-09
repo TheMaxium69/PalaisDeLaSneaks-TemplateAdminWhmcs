@@ -182,7 +182,8 @@
             var hiddenCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
             hidden.checked = false;
             
-
+            var stockCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
+            
         </script>
 
         <style>
@@ -200,6 +201,7 @@
             #tab1 table tr:nth-child(8),
             #tab1 table tr:nth-child(9),
             #tab1 table tr:nth-child(10),
+            
             #tab1 table tr:nth-child(11){
                 display: none!important;
             }
