@@ -205,7 +205,6 @@
 
             var champOption = document.querySelector("#tab4 table tr:nth-child(2) option:nth-child(2)");
             champOption.setAttribute('selected', true);
-            console.log(champOption);
             
         </script>
 
@@ -276,7 +275,7 @@
     #tab4 table tr:nth-child(2),
     #tab4 table tr:nth-child(4),
     #tab4 table tr:nth-child(5),
-    #tab4 table tr:nth-child(6){
+    #tab4 table tr:nth-child(6) label{
         display: none;
     }
 
