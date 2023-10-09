@@ -179,6 +179,11 @@
                 asChecked.checked = true;
             }
 
+            var productShared = document.querySelector("#productTypeShared");
+            var productOther = document.querySelector("#productTypeOther");
+            productShared.classList.remove("active");
+            productOther.classList.add("active");
+
         </script>
 
         <style>
@@ -233,6 +238,11 @@
 
             #tab4 table tr:nth-child(6) td.fieldarea label{
                 /*display: none;*/
+            }
+
+            #frmAddProduct .form-group:nth-child(3),
+            #frmAddProduct .form-group:nth-child(6){
+                display: none;
             }
 
         </style>
