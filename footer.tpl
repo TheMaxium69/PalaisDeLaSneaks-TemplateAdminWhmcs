@@ -209,73 +209,88 @@
             
         </script>
 
-        <style>
-            .contentarea  #frmProductEdit ul.nav li:nth-child(4),
-            .contentarea  #frmProductEdit ul.nav li:nth-child(6),
-            .contentarea  #frmProductEdit ul.nav li:nth-child(7),
-            .contentarea  #frmProductEdit ul.nav li:nth-child(8),
-            .contentarea  #frmProductEdit ul.nav li:nth-child(9),
-            .contentarea  #frmProductEdit ul.nav li:nth-child(10){
-                display: none!important;
-            }
+<style>
 
-            #tab1 table tr:nth-child(1),
-            #tab1 table tr:nth-child(5),
-            #tab1 table tr:nth-child(6),
-            #tab1 table tr:nth-child(7) label,
-            #tab1 table tr:nth-child(8),
-            #tab1 table tr:nth-child(9),
-            #tab1 table tr:nth-child(10),
-            #tab1 table tr:nth-child(11){
-                display: none!important;
-            }
+    {* Liste des éléments cacher dans le panel ADMIN *}
 
-            #tab2 table.form tbody tr:nth-child(1) label:nth-child(3),
-            #tab2 table.form tbody tr:nth-child(4),
-            #tab2 table.form tbody tr:nth-child(5),
-            #tab2 table.form tbody tr:nth-child(6),
-            #tab2 table.form tbody tr:nth-child(7),
-            #tab2 table.form tbody tr:nth-child(8),
-            #tab2 table.form tbody tr:nth-child(9){
-                display: none;
-            }
+    {****************}
+    {* Pages dans modification du produit *}
+    {****************}
+    .contentarea  #frmProductEdit ul.nav li:nth-child(4),
+    .contentarea  #frmProductEdit ul.nav li:nth-child(6),
+    .contentarea  #frmProductEdit ul.nav li:nth-child(7),
+    .contentarea  #frmProductEdit ul.nav li:nth-child(8),
+    .contentarea  #frmProductEdit ul.nav li:nth-child(9),
+    .contentarea  #frmProductEdit ul.nav li:nth-child(10){
+        display: none!important;
+    }
 
-            #tab2 table tr:nth-child(3){
-                visibility: hidden
-            }
+    {****************}
+    {* Champs dans la page détails dans modification du produit *}
+    {****************}
+    #tab1 table tr:nth-child(1),
+    #tab1 table tr:nth-child(5),
+    #tab1 table tr:nth-child(6),
+    #tab1 table tr:nth-child(7) label,
+    #tab1 table tr:nth-child(8),
+    #tab1 table tr:nth-child(9),
+    #tab1 table tr:nth-child(10),
+    #tab1 table tr:nth-child(11){
+        display: none!important;
+    }
 
-            #pricingtbl tr:nth-child(2) td:nth-child(2),
-            #pricingtbl tr:nth-child(2) td:nth-child(3){
-                display:none;
-            }
+    {****************}
+    {* Champs dans la page prix dans modification du produit *}
+    {****************}
+    #tab2 table.form tbody tr:nth-child(1) label:nth-child(3),
+    #tab2 table.form tbody tr:nth-child(4),
+    #tab2 table.form tbody tr:nth-child(5),
+    #tab2 table.form tbody tr:nth-child(6),
+    #tab2 table.form tbody tr:nth-child(7),
+    #tab2 table.form tbody tr:nth-child(8),
+    #tab2 table.form tbody tr:nth-child(9){
+        display: none;
+    }
 
-            #pricingtbl tr:nth-child(4){
-                display: block!important;
-            }
+    #tab2 table tr:nth-child(3){
+        visibility: hidden
+    }
 
-            #pricingtbl tr:nth-child(3){
-                visibility: visible!important;
-            }
+    {****************}
+    {* Correction des champs de saisis prix dans la page prix dans modification du produit *}
+    {****************}
+    #pricingtbl tr:nth-child(2) td:nth-child(2),
+    #pricingtbl tr:nth-child(2) td:nth-child(3){
+        display:none;
+    }
+    #pricingtbl tr:nth-child(4){
+        display: block!important;
+    }
+    #pricingtbl tr:nth-child(3){
+        visibility: visible!important;
+    }
 
-            #tab4 table tr:nth-child(2),
-            #tab4 table tr:nth-child(4),
-            #tab4 table tr:nth-child(5),
-            #tab4 table tr:nth-child(6){
-                display: none;
-            }
+    {****************}
+    {* Champs dans la page champs personnalisés dans modification du produit *}
+    {****************}
+    #tab4 table tr:nth-child(2),
+    #tab4 table tr:nth-child(4),
+    #tab4 table tr:nth-child(5),
+    #tab4 table tr:nth-child(6){
+        display: none;
+    }
 
-            #tab4 table tr:nth-child(6) td.fieldarea label{
-                /*display: none;*/
-            }
+    {****************}
+    {* Champs dans la page ajout d'un produit *}
+    {****************}
+    #frmAddProduct .form-group:nth-child(3),
+    #frmAddProduct .form-group:nth-child(6),
+    #frmAddProduct .form-group:nth-child(7),
+    #frmAddProduct .alert-grey{
+        display: none;
+    }
 
-            #frmAddProduct .form-group:nth-child(3),
-            #frmAddProduct .form-group:nth-child(6),
-            #frmAddProduct .form-group:nth-child(7),
-            #frmAddProduct .alert-grey{
-                display: none;
-            }
-
-        </style>
+</style>
 {* FOOTER *}
 
         <script>
