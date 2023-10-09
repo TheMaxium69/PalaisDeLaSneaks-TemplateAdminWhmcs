@@ -184,6 +184,12 @@
             productShared.classList.remove("active");
             productOther.classList.add("active");
 
+            var switchButton = document.querySelector(".bootstrap-switch-on");
+            switchButton.classList.remove("bootstrap-switch-on");
+            switchButton.classList.add("bootstrap-switch-off");
+
+            console.log(switchButton);
+
         </script>
 
         <style>
