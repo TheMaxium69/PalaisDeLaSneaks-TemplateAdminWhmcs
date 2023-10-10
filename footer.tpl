@@ -197,15 +197,17 @@
             var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
             changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
 
-            var enableCheck = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(2) input');
-            enableCheck.checked = true;
+            var changeEnableToActive = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(1)');
+            changeEnableToActive.innerHTML = "Activer"
 
             var showImageCheck = document.querySelector("#tab4 table tr:nth-child(6) label:nth-child(3) input");
             showImageCheck.checked = true;
 
             var champOption = document.querySelector("#tab4 table tr:nth-child(2) option:nth-child(2)");
             champOption.setAttribute('selected', true);
-            
+
+            var domaineRequiert = document.querySelector("#tab1 table tr:nth-child(6) td:nth-child(2) input[name='showdomainops']");
+            domaineRequiert.checked = false;
         </script>
 
 <style>
