@@ -304,6 +304,8 @@
             footerCop.innerHTML = " Copyright © " + '<a href="https://tyrolium.fr/" target="_blank">Tyrolium</a> 2023.' + " All Rights Reserved.";
             footerLink.innerHTML = '<a href="https://tyrolium.fr" target="_blank">Web Site</a>  | <a href="../../about.php" target="_blank">Conditions & Terms</a>'
 
+            var buttonAddAnnonce = document.querySelector("#contentarea div form p[align='center']");
+            buttonAddAnnonce.innerHTML = '<input type="submit" id="add_announcement" value="Ajouter une nouvelle annonce" class="btn btn-primary">';
 
         </script>
 

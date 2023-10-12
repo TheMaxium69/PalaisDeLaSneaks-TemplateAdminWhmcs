@@ -29,7 +29,12 @@
         </li>
         <li class="">
             <a id="Menu-Clients" href="configproducts.php" onclick="">
-                Gerez
+                Gerer
+            </a>
+        </li>
+        <li class="">
+            <a id="Menu-Clients" href="supportannouncements.php" onclick="">
+                Annonce
             </a>
         </li>
     </ul>
