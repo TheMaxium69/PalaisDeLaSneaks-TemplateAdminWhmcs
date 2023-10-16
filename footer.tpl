@@ -95,6 +95,10 @@
                 display: none;
             }
 
+            .global-admin-warning{
+                display: none!important;
+            }
+
         </style>
 
 {* GESTION PAGE *}
