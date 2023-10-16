@@ -207,9 +207,6 @@
             var showImageCheck = document.querySelector("#tab4 table tr:nth-child(6) label:nth-child(3) input");
             showImageCheck.checked = true;
 
-            var champOption = document.querySelector("#tab4 table tr:nth-child(2) option:nth-child(2)");
-            champOption.setAttribute('selected', true);
-
             var domaineRequiert = document.querySelector("#tab1 table tr:nth-child(6) td:nth-child(2) input[name='showdomainops']");
             domaineRequiert.checked = false;
 
@@ -226,6 +223,9 @@
             changeBaliseIframe.replaceWith(iframAddImage);
 
             iframAddImage.setAttribute('src', '../../api/more/add.php');
+
+            var nameChampPerso = document.querySelector("#tab4 table tr:nth-child(1) td:nth-child(2) input");
+            nameChampPerso.setAttribute('value', 'Taille');
 
         </script>
 
@@ -293,10 +293,9 @@
     {****************}
     {* Champs dans la page champs personnalisés dans modification du produit *}
     {****************}
-    #tab4 table tr:nth-child(2),
     #tab4 table tr:nth-child(4),
     #tab4 table tr:nth-child(5),
-    #tab4 table tr:nth-child(6) label{
+    #tab4 table tr:nth-child(6){
         display: none;
     }
 
