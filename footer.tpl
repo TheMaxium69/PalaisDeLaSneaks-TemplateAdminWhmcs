@@ -208,6 +208,21 @@
 
             var domaineRequiert = document.querySelector("#tab1 table tr:nth-child(6) td:nth-child(2) input[name='showdomainops']");
             domaineRequiert.checked = false;
+
+            var changeTitleImage = document.querySelector(".contentarea  #frmProductEdit ul.nav li:nth-child(5) a");
+            changeTitleImage.innerHTML = 'Image';
+
+            var changeNameTdImage = document.querySelector("#tab5 table tbody tr td:nth-child(1)");
+            changeNameTdImage.innerHTML = 'Ajouter/Modifier les images';
+
+            var changeBaliseIframe = document.querySelector("#tab5 table tbody tr td:nth-child(2)");
+            var iframAddImage = document.createElement('iframe');
+            
+            iframAddImage.textContent = changeBaliseIframe.textContent;
+            changeBaliseIframe.replaceWith(iframAddImage);
+
+            iframAddImage.setAttribute('src', '../../api/more/add.php');
+
         </script>
 
 <style>
@@ -218,7 +233,7 @@
     {* Pages dans modification du produit *}
     {****************}
     .contentarea  #frmProductEdit ul.nav li:nth-child(4),
-    .contentarea  #frmProductEdit ul.nav li:nth-child(6),
+    .contentarea  #frmProductEdit ul.nav li:nth-child(5),
     .contentarea  #frmProductEdit ul.nav li:nth-child(7),
     .contentarea  #frmProductEdit ul.nav li:nth-child(8),
     .contentarea  #frmProductEdit ul.nav li:nth-child(9),
@@ -290,6 +305,14 @@
     #frmAddProduct .alert-grey{
         display: none;
     }
+
+
+    #tab5 table tbody tr iframe{
+        width: 100%;
+    }
+
+
+
 
 </style>
 {* FOOTER *}
