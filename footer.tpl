@@ -111,11 +111,17 @@
             }
 
             var CreateGrouplink = document.querySelector("#Create-Group-link");
-            CreateGrouplink.innerHTML = '<i class="fas fa-plus"></i> Créer une marque'
+            if(CreateGrouplink !== null){
+                CreateGrouplink.innerHTML = '<i class="fas fa-plus"></i> Créer une marque'
+            }
             var CreateProductlink = document.querySelector("#Create-Product-link");
-            CreateProductlink.innerHTML = '<i class="fas fa-plus-circle"></i> Créer une chaussure'
+            if(CreateProductlink !== null){
+                CreateProductlink.innerHTML = '<i class="fas fa-plus-circle"></i> Créer une chaussure'
+            }
             var DuplicateProductlink = document.querySelector("#Duplicate-Product-link");
-            DuplicateProductlink.innerHTML = '<i class="fas fa-plus-square"></i> Dupliqué une chaussure'
+            if(DuplicateProductlink !== null){
+                DuplicateProductlink.innerHTML = '<i class="fas fa-plus-square"></i> Dupliqué une chaussure'
+            }
 
         </script>
 
@@ -156,11 +162,6 @@
 
         <script>
 
-            var inputTypeProduct = document.querySelector('#frmAddProduct .form-group:first-child input');
-            inputTypeProduct.value = "other";
-
-
-
         </script>
 
         <style>
@@ -178,54 +179,105 @@
 
         <script>
 
+            var monNoeudTexte = document.createTextNode('Texte existant');
+            monNoeudTexte.nodeValue = 'Nouveau texte';  
+
+            var changeNameStatus = document.querySelector("#tableBackground table tr th:nth-child(3)");
+            if(changeNameStatus!== null){
+                changeNameStatus.innerHTML = 'Status';
+            }
+        
+
+            var listeLigneMarque =  document.querySelectorAll("#tableBackground table tbody:nth-child(1) tr td:nth-child(1)");
+            listeLigneMarque.forEach((ligneMarque) => {
+                ligneMarque.colSpan = "4";
+            });
+
+
+            var changeStatusProd = document.querySelectorAll("#tableBackground table tr td:nth-child(3)");
+
+            changeStatusProd.forEach((statusProd) => {
+                if(statusProd.innerHTML == "Une fois") {
+                    statusProd.innerHTML = "En ligne";
+                }else if(statusProd.innerHTML == "Gratuit"){
+                    statusProd.innerHTML = "Hors ligne";
+                }
+            });
+
+
             var asChecked = document.querySelector("#tab4 table tr:nth-child(6) td.fieldarea label:nth-child(3) input");
             if (asChecked){
                 asChecked.checked = true;
             }
 
             var hiddenCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
-            hiddenCheck.checked = false;
+            if(hiddenCheck !== null){
+                hiddenCheck.checked = false;
+            }
             
             var stockCheck = document.querySelector("#tab1 table tr:nth-child(7) input[name='stockcontrol']");
-            stockCheck.checked = true;
+            if(stockCheck !== null){
+                stockCheck.checked = true;
+            }
 
             var stockValueOne = document.querySelector("#tab1 table tr:nth-child(7) input[name='qty']");
-            stockValueOne.value = "1";
+            if(stockValueOne !== null){
+                stockValueOne.value = "1";
+            }
 
             var typeProductHeberg = document.querySelector("#tab1 table tr:nth-child(1) option:nth-child(1)");
-            typeProductHeberg.setAttribute('selected', false);
+            if(typeProductHeberg !== null){
+                typeProductHeberg.setAttribute('selected', false);
+            }
 
             var typeProductOther = document.querySelector("#tab1 table tr:nth-child(1) option:nth-child(4)");
-            typeProductOther.setAttribute('selected', true);
+            if(typeProductOther !== null){
+                typeProductOther.setAttribute('selected', true);
+            }
 
             var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
-            changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
+            if(changeGratuit !== null){
+                changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
+            }
 
             var changeEnableToActive = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(1)');
-            changeEnableToActive.innerHTML = "Activer"
+            if(changeEnableToActive !== null){
+                changeEnableToActive.innerHTML = "Activer"
+            }
 
             var showImageCheck = document.querySelector("#tab4 table tr:nth-child(6) label:nth-child(3) input");
-            showImageCheck.checked = true;
+            if(showImageCheck !== null){
+                showImageCheck.checked = true;
+            }
 
             var domaineRequiert = document.querySelector("#tab1 table tr:nth-child(6) td:nth-child(2) input[name='showdomainops']");
-            domaineRequiert.checked = false;
+            if(domaineRequiert !== null){
+                domaineRequiert.checked = false;
+            }
 
             var changeTitleImage = document.querySelector(".contentarea  #frmProductEdit ul.nav li:nth-child(5) a");
-            changeTitleImage.innerHTML = 'Image';
+            if(changeTitleImage !== null){
+                changeTitleImage.innerHTML = 'Image';
+            }
 
             var changeNameTdImage = document.querySelector("#tab5 table tbody tr td:nth-child(1)");
-            changeNameTdImage.innerHTML = 'Ajouter/Modifier les images';
+            if(changeNameTdImage !== null){
+                changeNameTdImage.innerHTML = 'Ajouter/Modifier les images';
+            }
 
             var changeBaliseIframe = document.querySelector("#tab5 table tbody tr td:nth-child(2)");
             var iframAddImage = document.createElement('iframe');
-            
-            iframAddImage.textContent = changeBaliseIframe.textContent;
-            changeBaliseIframe.replaceWith(iframAddImage);
 
-            iframAddImage.setAttribute('src', '../../api/more/add.php');
+            if(changeBaliseIframe !== null){
+                iframAddImage.textContent = changeBaliseIframe.textContent;
+                changeBaliseIframe.replaceWith(iframAddImage);
+                iframAddImage.setAttribute('src', '../../api/more/add.php');
+            }
 
             var nameChampPerso = document.querySelector("#tab4 table tr:nth-child(1) td:nth-child(2) input");
-            nameChampPerso.setAttribute('value', 'Taille');
+            if(nameChampPerso !== null){
+                nameChampPerso.setAttribute('value', 'Taille');
+            }
 
         </script>
 
@@ -318,6 +370,16 @@
 
 
 
+    #tableBackground table tr th:nth-child(2),
+    #tableBackground table tbody.list-group tr td:nth-child(2),
+    #tableBackground table tr th:nth-child(5),
+    #tableBackground table tbody.list-group tr td:nth-child(5){
+        display: none;
+    }
+
+
+
+
 </style>
 {* FOOTER *}
 
@@ -332,7 +394,9 @@
             footerLink.innerHTML = '<a href="https://tyrolium.fr" target="_blank">Web Site</a>  | <a href="../../about.php" target="_blank">Conditions & Terms</a>'
 
             var buttonAddAnnonce = document.querySelector("#contentarea div form p[align='center']");
-            buttonAddAnnonce.innerHTML = '<input type="submit" id="add_announcement" value="Ajouter une nouvelle annonce" class="btn btn-primary">';
+            if(buttonAddAnnonce !== null) {
+                buttonAddAnnonce.innerHTML = '<input type="submit" id="add_announcement" value="Ajouter une nouvelle annonce" class="btn btn-primary">';
+            }
 
         </script>
 
