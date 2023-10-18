@@ -131,8 +131,6 @@
 
             var isCreateGroupPage = document.querySelector('#frmAddProductGroup');
             if (isCreateGroupPage){
-                console.log("page GroupCreate");
-
                 var titleGroupCreate = document.querySelector("h2:first-of-type");
                 titleGroupCreate.textContent = "Créer/Editer une marque";
 
@@ -201,7 +199,7 @@
 
             var nomChaussure = document.querySelector("#frmAddProduct div.form-group:nth-child(5) label");
             if(nomChaussure!== null){
-                nomChaussure.innerHTML = 'Nom de la chaussure<br><small>Le nom d\'affichage par défaut de votre nouveau produit</small>';
+                nomChaussure.innerHTML = 'Nom de la chaussure<br><small>Le nom d\'affichage par défaut de votre nouvelle chaussure</small>';
             }
 
 
@@ -275,6 +273,12 @@
                 changeGratuit.innerHTML = horLigneReplace;
             }
 
+            var changeUneFois = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(2)");
+            if(changeUneFois !== null){
+                var enLigneReplace = changeUneFois.innerHTML.replace("Une fois", "En ligne");
+                changeUneFois.innerHTML = enLigneReplace;
+            }
+
             var changeEnableToActive = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(1)');
             if(changeEnableToActive !== null){
                 changeEnableToActive.innerHTML = "Activer"
@@ -295,24 +299,68 @@
                 changeTitleImage.innerHTML = 'Image';
             }
 
+            var changeTitleSize = document.querySelector(".contentarea  #frmProductEdit ul.nav li:nth-child(6) a");
+            if(changeTitleSize !== null){
+                changeTitleSize.innerHTML = 'Taille';
+            }
+
             var changeNameTdImage = document.querySelector("#tab5 table tbody tr td:nth-child(1)");
             if(changeNameTdImage !== null){
                 changeNameTdImage.innerHTML = 'Ajouter/Modifier les images';
             }
 
-            var changeBaliseIframe = document.querySelector("#tab5 table tbody tr td:nth-child(2)");
+            var changeNameTdTaille = document.querySelector("#tab6 table tbody tr td:nth-child(1)");
+            if(changeNameTdTaille !== null){
+                changeNameTdTaille.innerHTML = 'Ajouter/Modifier les tailles';
+            }
+
+            var changeBaliseIframeImage = document.querySelector("#tab5 table tbody tr td:nth-child(2)");
             var iframAddImage = document.createElement('iframe');
 
-            if(changeBaliseIframe !== null){
-                iframAddImage.textContent = changeBaliseIframe.textContent;
-                changeBaliseIframe.replaceWith(iframAddImage);
+            if(changeBaliseIframeImage !== null){
+                iframAddImage.textContent = changeBaliseIframeImage.textContent;
+                changeBaliseIframeImage.replaceWith(iframAddImage);
                 iframAddImage.setAttribute('src', '../../api/more/add.php');
+            }
+
+            var changeBaliseIframeTaille = document.querySelector("#tab6 table tbody tr td:nth-child(2)");
+            var iframAddTaille = document.createElement('iframe');
+
+            if(changeBaliseIframeTaille !== null){
+                iframAddImage.textContent = changeBaliseIframeTaille.textContent;
+                changeBaliseIframeTaille.replaceWith(iframAddTaille);
+                iframAddTaille.setAttribute('src', '../../api/size/add.php');
             }
 
             var nameChampPerso = document.querySelector("#tab4 table tr:nth-child(1) td:nth-child(2) input");
             if(nameChampPerso !== null){
                 nameChampPerso.setAttribute('value', 'Taille');
             }
+
+
+            var changeGroupProd = document.querySelector("#tab1 table tr:nth-child(2) td:nth-child(1)");
+            if(changeGroupProd !== null){
+                changeGroupProd.innerHTML = "Marque de la chaussure";
+            }
+
+            var changeNomProd = document.querySelector("#tab1 table tr:nth-child(3) td:nth-child(1)");
+            if(changeNomProd !== null){
+                changeNomProd.innerHTML = "Nom de la chaussure";
+            }
+
+            var changeDescProd = document.querySelector("#tab1 table tr:nth-child(4) td:nth-child(1)");
+            if(changeDescProd !== null){
+                changeDescProd.innerHTML = "Description de la chaussure";
+            }
+
+            var prodExistantChange = document.querySelectorAll("#contentarea form table tbody tr td:nth-child(1)");
+            prodExistantChange.forEach((changeProd) => {
+                if(changeProd.innerHTML == "Produit existant") {
+                    changeProd.innerHTML = "Chaussure existant";
+                }
+                var nouveauReplace = changeProd.innerHTML.replace("Nom du nouveau produit", "Nom de la nouvelle chaussure");
+                changeProd.innerHTML = nouveauReplace;
+            });
 
         </script>
 
@@ -325,7 +373,6 @@
     {****************}
     .contentarea  #frmProductEdit ul.nav li:nth-child(4),
     .contentarea  #frmProductEdit ul.nav li:nth-child(5),
-    .contentarea  #frmProductEdit ul.nav li:nth-child(7),
     .contentarea  #frmProductEdit ul.nav li:nth-child(8),
     .contentarea  #frmProductEdit ul.nav li:nth-child(9),
     .contentarea  #frmProductEdit ul.nav li:nth-child(10){
@@ -397,7 +444,8 @@
     }
 
 
-    #tab5 table tbody tr iframe{
+    #tab5 table tbody tr iframe,
+    #tab6 table tbody tr iframe{
         width: 100%;
         height: 400px;
     }
@@ -409,6 +457,12 @@
     #tableBackground table tbody.list-group tr td:nth-child(2),
     #tableBackground table tr th:nth-child(5),
     #tableBackground table tbody.list-group tr td:nth-child(5){
+        display: none;
+    }
+
+
+    #tab6 table tbody tr:nth-child(2),
+    #tab6 table tbody tr:nth-child(3){
         display: none;
     }
 
