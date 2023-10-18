@@ -179,8 +179,42 @@
 
         <script>
 
-            var monNoeudTexte = document.createTextNode('Texte existant');
-            monNoeudTexte.nodeValue = 'Nouveau texte';  
+            var changeNameMarque = document.querySelectorAll("#tableBackground table tbody:nth-child(1) tr td:nth-child(1) strong");
+            changeNameMarque.forEach((nameMarque) => {
+                nameMarque.innerHTML = "Marque: ";
+            });
+
+            var thChaussure = document.querySelector("#tableBackground table tbody:nth-child(1) tr th:nth-child(1)");
+            if(thChaussure!== null){
+                thChaussure.innerHTML = 'Nom de la chaussure';
+            }
+
+            var addProdChaussure = document.querySelector("#frmAddProduct h2");
+            if(addProdChaussure!== null){
+                addProdChaussure.innerHTML = 'Créer une nouvelle paire de chaussure';
+            }
+
+            var groupeChaussure = document.querySelector("#frmAddProduct div.form-group:nth-child(4) label");
+            if(groupeChaussure!== null){
+                groupeChaussure.innerHTML = 'Marque de la chaussure<br><small><a href="configproducts.php?action=creategroup">Cliquez ici pour créer une nouvelle marque de chaussre</a></small>';
+            }
+
+            var nomChaussure = document.querySelector("#frmAddProduct div.form-group:nth-child(5) label");
+            if(nomChaussure!== null){
+                nomChaussure.innerHTML = 'Nom de la chaussure<br><small>Le nom d\'affichage par défaut de votre nouveau produit</small>';
+            }
+
+
+            var titleModifierChaussure = document.querySelector("#contentarea div:nth-child(1) h2");
+            if(titleModifierChaussure!== null){
+                if(titleModifierChaussure.innerHTML == "Edit Product"){
+                    titleModifierChaussure.innerHTML = "Modifier une chaussure";
+                }
+                if(titleModifierChaussure.innerHTML == "Dupliquer un produit"){
+                    titleModifierChaussure.innerHTML = "Dupliquer une chaussure";
+                }
+            }
+
 
             var changeNameStatus = document.querySelector("#tableBackground table tr th:nth-child(3)");
             if(changeNameStatus!== null){
@@ -235,10 +269,18 @@
                 typeProductOther.setAttribute('selected', true);
             }
 
+<<<<<<< Updated upstream
             // var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
             // if(changeGratuit !== null){
             //     changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
             // }
+=======
+            var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
+            if(changeGratuit !== null){
+                var horLigneReplace = changeGratuit.innerHTML.replace("Gratuit", "Hors ligne");
+                changeGratuit.innerHTML = horLigneReplace;
+            }
+>>>>>>> Stashed changes
 
             var changeEnableToActive = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(1)');
             if(changeEnableToActive !== null){
