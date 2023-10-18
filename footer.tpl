@@ -122,7 +122,6 @@
             if(DuplicateProductlink !== null){
                 DuplicateProductlink.innerHTML = '<i class="fas fa-plus-square"></i> Dupliqué une chaussure'
             }
-
         </script>
 
 {* CREATE/EDITE GROUP *}
