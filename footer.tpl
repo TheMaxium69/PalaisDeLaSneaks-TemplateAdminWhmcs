@@ -235,10 +235,10 @@
                 typeProductOther.setAttribute('selected', true);
             }
 
-            var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
-            if(changeGratuit !== null){
-                changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
-            }
+            // var changeGratuit = document.querySelector("#tab2 table.form tbody tr:nth-child(1) label:nth-child(1)");
+            // if(changeGratuit !== null){
+            //     changeGratuit.innerHTML  = "<input type='radio' name='paytype' id='PayType-Free' value='free' onclick='hidePricingTable()' checked=''> Hors ligne";
+            // }
 
             var changeEnableToActive = document.querySelector('#tab2 table.form tbody tr:nth-child(2) tr:nth-child(4) td:nth-child(1)');
             if(changeEnableToActive !== null){
