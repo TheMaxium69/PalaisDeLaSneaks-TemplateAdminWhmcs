@@ -176,6 +176,12 @@
 
         <script>
 
+            var titlePageH1 = document.querySelector("#contentarea h1");
+            if(titlePageH1 !== null){
+                var titleChaussure = titlePageH1.innerHTML.replace("Produits/Services", "Chaussures");
+                titlePageH1.innerHTML = titleChaussure;
+            }
+
             var changeNameMarque = document.querySelectorAll("#tableBackground table tbody:nth-child(1) tr td:nth-child(1) strong");
             changeNameMarque.forEach((nameMarque) => {
                 nameMarque.innerHTML = "Marque: ";
@@ -224,6 +230,17 @@
                 ligneMarque.colSpan = "4";
             });
 
+            var changeStatusStype = document.querySelector("#tab2 table tr td:nth-child(1)");
+            if(changeStatusStype!== null){
+                var horLigneReplace = changeStatusStype.innerHTML.replace("Type de paiement", "Status");
+                changeStatusStype.innerHTML = horLigneReplace;
+            }
+
+            var removeMensuel = document.querySelector("#pricingtbl tbody tr:nth-child(1) td:nth-child(3)");
+            if(removeMensuel!== null){
+                var noneReplace = removeMensuel.innerHTML.replace("Une fois/Mensuel", "");
+                removeMensuel.innerHTML = noneReplace;
+            }
 
             var changeStatusProd = document.querySelectorAll("#tableBackground table tr td:nth-child(3)");
 
@@ -360,6 +377,12 @@
                 var nouveauReplace = changeProd.innerHTML.replace("Nom du nouveau produit", "Nom de la nouvelle chaussure");
                 changeProd.innerHTML = nouveauReplace;
             });
+
+            var addAnnonceChange = document.querySelector("#contentarea h2");
+            if(addAnnonceChange !== null){
+                var ajouterAnnonce = addAnnonceChange.innerHTML.replace("Add Annonce", "Ajouter une annonce");
+                addAnnonceChange.innerHTML = ajouterAnnonce;
+            }
 
         </script>
 
