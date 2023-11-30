@@ -404,7 +404,7 @@
     {****************}
     {* Champs dans la page détails dans modification du produit *}
     {****************}
-    #tab1 table tr:nth-child(1),
+    /*#tab1 table tr:nth-child(1),
     #tab1 table tr:nth-child(5),
     #tab1 table tr:nth-child(6),
     #tab1 table tr:nth-child(7) label,
@@ -412,6 +412,22 @@
     #tab1 table tr:nth-child(9),
     #tab1 table tr:nth-child(10),
     #tab1 table tr:nth-child(11){
+        display: none!important;
+    }*/
+    /*EN PROD*/
+    #tab1 table tr:nth-child(1),
+    #tab1 table tr:nth-child(4),
+    #tab1 table tr:nth-child(5),
+    #tab1 table tr:nth-child(6),
+    #tab1 table tr:nth-child(8),
+    #tab1 table tr:nth-child(9),
+    #tab1 table tr:nth-child(10),
+    #tab1 table tr:nth-child(11) label,
+    #tab1 table tr:nth-child(12),
+    #tab1 table tr:nth-child(13),
+    #tab1 table tr:nth-child(14), /*HIDDEN*/
+    #tab1 table tr:nth-child(15),
+    {
         display: none!important;
     }
 
