@@ -258,17 +258,17 @@
                 asChecked.checked = true;
             }
 
-            var hiddenCheck = document.querySelector("#tab1 table tr:nth-child(10) input");
+            var hiddenCheck = document.querySelector("#tab1 table tr:nth-child(14) input");
             if(hiddenCheck !== null){
                 hiddenCheck.checked = false;
             }
             
-            var stockCheck = document.querySelector("#tab1 table tr:nth-child(7) input[name='stockcontrol']");
+            var stockCheck = document.querySelector("#tab1 table tr:nth-child(11) input[name='stockcontrol']");
             if(stockCheck !== null){
                 stockCheck.checked = true;
             }
 
-            var stockValueOne = document.querySelector("#tab1 table tr:nth-child(7) input[name='qty']");
+            var stockValueOne = document.querySelector("#tab1 table tr:nth-child(11) input[name='qty']");
             if(stockValueOne !== null){
                 stockValueOne.value = "1";
             }
@@ -386,129 +386,129 @@
 
         </script>
 
-<style>
-
-    {* Liste des éléments cacher dans le panel ADMIN *}
-
-    {****************}
-    {* Pages dans modification du produit *}
-    {****************}
-    .contentarea  #frmProductEdit ul.nav li:nth-child(4),
-    .contentarea  #frmProductEdit ul.nav li:nth-child(5),
-    .contentarea  #frmProductEdit ul.nav li:nth-child(8),
-    .contentarea  #frmProductEdit ul.nav li:nth-child(9),
-    .contentarea  #frmProductEdit ul.nav li:nth-child(10){
-        display: none!important;
-    }
-
-    {****************}
-    {* Champs dans la page détails dans modification du produit *}
-    {****************}
-    /*#tab1 table tr:nth-child(1),
-    #tab1 table tr:nth-child(5),
-    #tab1 table tr:nth-child(6),
-    #tab1 table tr:nth-child(7) label,
-    #tab1 table tr:nth-child(8),
-    #tab1 table tr:nth-child(9),
-    #tab1 table tr:nth-child(10),
-    #tab1 table tr:nth-child(11){
-        display: none!important;
-    }*/
-    /*EN PROD*/
-    #tab1 table tr:nth-child(1),
-    #tab1 table tr:nth-child(4),
-    #tab1 table tr:nth-child(5),
-    #tab1 table tr:nth-child(6),
-    #tab1 table tr:nth-child(8),
-    #tab1 table tr:nth-child(9),
-    #tab1 table tr:nth-child(10),
-    #tab1 table tr:nth-child(11) label,
-    #tab1 table tr:nth-child(12),
-    #tab1 table tr:nth-child(13),
-    #tab1 table tr:nth-child(14), /*HIDDEN*/
-    #tab1 table tr:nth-child(15){
-        display: none!important;
-    }
-
-    {****************}
-    {* Champs dans la page prix dans modification du produit *}
-    {****************}
-    #tab2 table.form tbody tr:nth-child(1) label:nth-child(3),
-    #tab2 table.form tbody tr:nth-child(4),
-    #tab2 table.form tbody tr:nth-child(5),
-    #tab2 table.form tbody tr:nth-child(6),
-    #tab2 table.form tbody tr:nth-child(7),
-    #tab2 table.form tbody tr:nth-child(8),
-    #tab2 table.form tbody tr:nth-child(9){
-        display: none;
-    }
-
-    #tab2 table tr:nth-child(3){
-        visibility: hidden
-    }
-
-    {****************}
-    {* Correction des champs de saisis prix dans la page prix dans modification du produit *}
-    {****************}
-    #pricingtbl tr:nth-child(2) td:nth-child(2),
-    #pricingtbl tr:nth-child(2) td:nth-child(3){
-        display:none;
-    }
-    #pricingtbl tr:nth-child(4){
-        display: block!important;
-    }
-    #pricingtbl tr:nth-child(3){
-        visibility: visible!important;
-    }
-
-    {****************}
-    {* Champs dans la page champs personnalisés dans modification du produit *}
-    {****************}
-    #tab4 table tr:nth-child(4),
-    #tab4 table tr:nth-child(5),
-    #tab4 table tr:nth-child(6){
-        display: none;
-    }
-
-    {****************}
-    {* Champs dans la page ajout d'un produit *}
-    {****************}
-    #frmAddProduct .form-group:nth-child(3),
-    #frmAddProduct .form-group:nth-child(6),
-    #frmAddProduct .form-group:nth-child(7),
-    #frmAddProduct .form-group:nth-child(8),
-    #frmAddProduct .alert-grey{
-        display: none;
-    }
-
-
-    #tab5 table tbody tr iframe,
-    #tab6 table tbody tr iframe{
-        width: 100%;
-        height: 400px;
-    }
-
-
-
-
-    #tableBackground table tr th:nth-child(2),
-    #tableBackground table tbody.list-group tr td:nth-child(2),
-    #tableBackground table tr th:nth-child(5),
-    #tableBackground table tbody.list-group tr td:nth-child(5){
-        display: none;
-    }
-
-
-    #tab6 table tbody tr:nth-child(2),
-    #tab6 table tbody tr:nth-child(3){
-        display: none;
-    }
-
-
-
-
-</style>
 {* FOOTER *}
+        <style>
+
+            {* Liste des éléments cacher dans le panel ADMIN *}
+
+            {****************}
+            {* Pages dans modification du produit *}
+            {****************}
+            .contentarea  #frmProductEdit ul.nav li:nth-child(4),
+            .contentarea  #frmProductEdit ul.nav li:nth-child(5),
+            .contentarea  #frmProductEdit ul.nav li:nth-child(8),
+            .contentarea  #frmProductEdit ul.nav li:nth-child(9),
+            .contentarea  #frmProductEdit ul.nav li:nth-child(10){
+                display: none!important;
+            }
+
+            {****************}
+            {* Champs dans la page détails dans modification du produit *}
+            {****************}
+            /*#tab1 table tr:nth-child(1),
+            #tab1 table tr:nth-child(5),
+            #tab1 table tr:nth-child(6),
+            #tab1 table tr:nth-child(7) label,
+            #tab1 table tr:nth-child(8),
+            #tab1 table tr:nth-child(9),
+            #tab1 table tr:nth-child(10),
+            #tab1 table tr:nth-child(11){
+                display: none!important;
+            }*/
+            /*EN PROD*/
+            #tab1 table tr:nth-child(1),
+            #tab1 table tr:nth-child(4),
+            #tab1 table tr:nth-child(5),
+            #tab1 table tr:nth-child(6),
+            #tab1 table tr:nth-child(8),
+            #tab1 table tr:nth-child(9),
+            #tab1 table tr:nth-child(10),
+            #tab1 table tr:nth-child(11) label,
+            #tab1 table tr:nth-child(12),
+            #tab1 table tr:nth-child(13),
+            #tab1 table tr:nth-child(14), /*HIDDEN*/
+            #tab1 table tr:nth-child(15){
+                display: none!important;
+            }
+
+            {****************}
+            {* Champs dans la page prix dans modification du produit *}
+            {****************}
+            #tab2 table.form tbody tr:nth-child(1) label:nth-child(3),
+            #tab2 table.form tbody tr:nth-child(4),
+            #tab2 table.form tbody tr:nth-child(5),
+            #tab2 table.form tbody tr:nth-child(6),
+            #tab2 table.form tbody tr:nth-child(7),
+            #tab2 table.form tbody tr:nth-child(8),
+            #tab2 table.form tbody tr:nth-child(9){
+                display: none;
+            }
+
+            #tab2 table tr:nth-child(3){
+                visibility: hidden
+            }
+
+            {****************}
+            {* Correction des champs de saisis prix dans la page prix dans modification du produit *}
+            {****************}
+            #pricingtbl tr:nth-child(2) td:nth-child(2),
+            #pricingtbl tr:nth-child(2) td:nth-child(3){
+                display:none;
+            }
+            #pricingtbl tr:nth-child(4){
+                display: block!important;
+            }
+            #pricingtbl tr:nth-child(3){
+                visibility: visible!important;
+            }
+
+            {****************}
+            {* Champs dans la page champs personnalisés dans modification du produit *}
+            {****************}
+            #tab4 table tr:nth-child(4),
+            #tab4 table tr:nth-child(5),
+            #tab4 table tr:nth-child(6){
+                display: none;
+            }
+
+            {****************}
+            {* Champs dans la page ajout d'un produit *}
+            {****************}
+            #frmAddProduct .form-group:nth-child(3),
+            #frmAddProduct .form-group:nth-child(6),
+            #frmAddProduct .form-group:nth-child(7),
+            #frmAddProduct .form-group:nth-child(8),
+            #frmAddProduct .alert-grey{
+                display: none;
+            }
+
+
+            #tab5 table tbody tr iframe,
+            #tab6 table tbody tr iframe{
+                width: 100%;
+                height: 400px;
+            }
+
+
+
+
+            #tableBackground table tr th:nth-child(2),
+            #tableBackground table tbody.list-group tr td:nth-child(2),
+            #tableBackground table tr th:nth-child(5),
+            #tableBackground table tbody.list-group tr td:nth-child(5){
+                display: none;
+            }
+
+
+            #tab6 table tbody tr:nth-child(2),
+            #tab6 table tbody tr:nth-child(3){
+                display: none;
+            }
+
+
+
+
+        </style>
 
         <script>
 
