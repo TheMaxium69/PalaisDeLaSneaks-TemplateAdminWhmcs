@@ -426,8 +426,7 @@
     #tab1 table tr:nth-child(12),
     #tab1 table tr:nth-child(13),
     #tab1 table tr:nth-child(14), /*HIDDEN*/
-    #tab1 table tr:nth-child(15),
-    {
+    #tab1 table tr:nth-child(15){
         display: none!important;
     }
 
