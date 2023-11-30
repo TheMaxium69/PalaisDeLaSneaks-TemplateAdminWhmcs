@@ -461,6 +461,7 @@
     #frmAddProduct .form-group:nth-child(3),
     #frmAddProduct .form-group:nth-child(6),
     #frmAddProduct .form-group:nth-child(7),
+    #frmAddProduct .form-group:nth-child(8),
     #frmAddProduct .alert-grey{
         display: none;
     }
