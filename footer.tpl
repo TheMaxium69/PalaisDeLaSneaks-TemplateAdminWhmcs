@@ -262,7 +262,12 @@
             if(hiddenCheck !== null){
                 hiddenCheck.checked = false;
             }
-            
+
+            var requireDomaineCheck = document.querySelector("#tab1 table tr:nth-child(10) input[name='showdomainops']");
+            if(requireDomaineCheck !== null){
+                requireDomaineCheck.checked = false;
+            }
+
             var stockCheck = document.querySelector("#tab1 table tr:nth-child(11) input[name='stockcontrol']");
             if(stockCheck !== null){
                 stockCheck.checked = true;
